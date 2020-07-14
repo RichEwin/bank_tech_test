@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'account'
+require 'transaction'
 
 describe Account do
   subject(:account) { Account.new }
@@ -32,6 +33,11 @@ describe Account do
     account.deposit(1000)
     expect { account.withdraw(1001) }.to raise_error('Insufficient Funds')
   end
+end
+
+describe Transaction do
+  subject(:account) { Account.new }
+  subject(:transaction) { Transaction.new }
 
   it 'stores user deposit into transaction array' do
     account.deposit(100)
