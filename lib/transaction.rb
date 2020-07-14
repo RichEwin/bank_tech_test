@@ -11,6 +11,12 @@ class Transaction
   end
 
   def display
-    "#{@date} || #{@credit} || #{@debit} || #{@balance}"
+    "#{@date} || #{format(@credit)} || #{format(@debit)} || #{format(@balance)}"
+  end
+
+  private
+
+  def format(type)
+    return '%.2f' % type.to_f.truncate(2) unless type == nil?
   end
 end

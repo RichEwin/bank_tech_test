@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'transaction'
+require_relative 'statement'
 
 class Account
   attr_reader :balance, :transactions
@@ -21,5 +22,11 @@ class Account
     withdraw_transaction = Transaction.new(balance: @balance, debit: amount)
     @transactions.unshift(withdraw_transaction)
     raise 'Insufficient Funds' if @balance < amount
+  end
+
+  def statement
+    statement = Statement.new
+    per_transaction = @transactions.map(&:display)
+    statement.print_statement(per_transaction)
   end
 end
