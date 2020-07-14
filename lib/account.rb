@@ -6,21 +6,20 @@ require_relative 'statement'
 class Account
   attr_reader :balance, :transactions
 
-  def initialize
+  def initialize(deposit_transaction = Transaction)
+    @deposit_transaction = deposit_transaction
     @balance = 0
     @transactions = []
   end
 
   def deposit(amount)
     @balance += amount
-    deposit_transaction = Transaction.new(balance: @balance, credit: amount)
-    @transactions.unshift(deposit_transaction)
+    @transactions.push(@deposit_transaction.new(balance: @balance, credit: amount))
   end
 
   def withdraw(amount)
     @balance -= amount
-    withdraw_transaction = Transaction.new(balance: @balance, debit: amount)
-    @transactions.unshift(withdraw_transaction)
+    @transactions.push(@deposit_transaction.new(balance: @balance, debit: amount))
     raise 'Insufficient Funds' if @balance < amount
   end
 
