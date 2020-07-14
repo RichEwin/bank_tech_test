@@ -13,6 +13,10 @@ describe Account do
     expect(account.balance).to eq 0
   end
 
+  it 'initializes with a empty transactions array' do
+    expect(account.transactions).to eq []
+  end
+
   it 'allows a user to deposit funds' do
     account.deposit(1000)
     expect(account.balance).to eq 1000
