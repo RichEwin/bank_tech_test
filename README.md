@@ -4,8 +4,13 @@
 
 ## Approach
 
-Describe your approach
-Describe how you structured your code and why
+The Bank program is split up into various classes that understands the behaviour of various methods. The classes encapsulate these behaviours.
+
+- The Account Class understands the behaviour of the balance, deposit, withdraw and statement methods.
+- The Statement Class understands the behaviour of the print_statement method.
+- The Transaction Class understands the behaviour of the display method.
+
+- A new instance of Transaction is created when the deposit and withdraw methods are called. This instance is stored in the transactions array in the Account class. The Statement class calls upon the transactions array to display each transaction into a formatted statement. 
 
 ## User Stories
 
@@ -58,5 +63,6 @@ date || credit || debit || balance
 14/07/2020 || 2000.00 ||  || 3000.00
 14/07/2020 || 1000.00 ||  || 1000.00
 ```
+<img width="500" alt="picture" src="https://github.com/RichEwin/bank_tech_test/blob/master/images/Screenshot%202020-07-14%20at%2015.11.50.png?raw=true">
 
-IMAGE HERE
+
