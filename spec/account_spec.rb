@@ -12,4 +12,9 @@ describe Account do
   it 'initializes with a balance' do
     expect(account.balance).to eq 0
   end
+
+  it 'allows a user to deposit funds' do
+    account.deposit(1000)
+    expect(account.balance).to eq 1000
+  end
 end
