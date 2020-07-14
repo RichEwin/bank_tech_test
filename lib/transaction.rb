@@ -17,6 +17,6 @@ class Transaction
   private
 
   def format(type)
-    return '%.2f' % type.to_f.truncate(2) unless type == nil?
+    return '%.2f' % type.to_f.truncate(2) unless type.nil?
   end
 end
