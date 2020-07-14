@@ -9,8 +9,8 @@ class Statement
     @header = 'date || credit || debit || balance'
   end
 
-  def print_statement(transaction)
+  def print_statement(per_transaction)
     puts @header
-    puts transaction.join("\n")
+    puts per_transaction.join("\n")
   end
 end
