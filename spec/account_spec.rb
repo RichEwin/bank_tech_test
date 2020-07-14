@@ -38,4 +38,9 @@ describe Account do
     account.withdraw(500)
     expect(account.transactions.last).to eq -500
   end
+
+  it 'raises error if withdraw is greater than balance' do
+    account.deposit(1000)
+    expect { account.withdraw(1001) }.to raise_error('Insufficient Funds')
+  end
 end
