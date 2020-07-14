@@ -9,4 +9,8 @@ class Transaction
     @debit = debit
     @date = date
   end
+
+  def display
+    "#{@date} || #{@credit} || #{@debit} || #{@balance}"
+  end
 end
