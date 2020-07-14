@@ -18,4 +18,9 @@ describe Transaction do
     transaction = Transaction.new(balance: 100, credit: 200)
     expect(transaction.credit).to eq 200
   end
+
+  it 'initializes with a debit' do
+    transaction = Transaction.new(balance: 100, credit: 200, debit: 300)
+    expect(transaction.debit).to eq 300
+  end
 end
