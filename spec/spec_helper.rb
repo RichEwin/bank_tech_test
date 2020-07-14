@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+# rubocop:disable all
+
 require 'simplecov'
 SimpleCov.start
 
