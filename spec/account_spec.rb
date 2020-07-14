@@ -32,4 +32,10 @@ describe Account do
     account.deposit(1000)
     expect(account.transactions).to eq [1000]
   end
+
+  it 'stores user withdrawel into transaction array' do
+    account.deposit(1000)
+    account.withdraw(500)
+    expect(account.transactions.last).to eq -500
+  end
 end
