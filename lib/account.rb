@@ -10,6 +10,7 @@ class Account
 
   def deposit(amount)
     @balance += amount
+    @transactions << amount
   end
 
   def withdraw(amount)

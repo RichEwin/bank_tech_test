@@ -27,4 +27,9 @@ describe Account do
     account.withdraw(500)
     expect(account.balance).to eq 500
   end
+
+  it 'stores user deposit into transaction array' do
+    account.deposit(1000)
+    expect(account.transactions).to eq [1000]
+  end
 end
