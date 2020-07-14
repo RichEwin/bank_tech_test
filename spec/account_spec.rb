@@ -8,4 +8,8 @@ describe Account do
   it 'creates a new Account' do
     expect(account).to be_instance_of Account
   end
+
+  it 'initializes with a balance' do
+    expect(account.balance).to eq 0
+  end
 end
