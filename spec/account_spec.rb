@@ -28,7 +28,7 @@ describe Account do
     expect(account.balance).to eq 500
   end
 
-  it 'stores user deposit into transaction array' do
+  xit 'stores user deposit into transaction array' do
     account.deposit(1000)
     expect(account.transactions).to eq [1000]
   end
@@ -42,5 +42,10 @@ describe Account do
   it 'raises error if withdraw is greater than balance' do
     account.deposit(1000)
     expect { account.withdraw(1001) }.to raise_error('Insufficient Funds')
+  end
+
+  it 'stores user deposit into transaction array' do
+    account.deposit(100)
+    expect(account.transactions.first).to be_an_instance_of Transaction
   end
 end
