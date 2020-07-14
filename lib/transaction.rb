@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 class Transaction
-  attr_reader :balance
+  attr_reader :balance, :credit
 
-  def initialize(balance: nil)
+  def initialize(balance: nil, credit: nil)
     @balance = balance
+    @credit = credit
   end
 end
