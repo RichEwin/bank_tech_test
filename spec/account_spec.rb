@@ -48,4 +48,10 @@ describe Account do
     account.deposit(100)
     expect(account.transactions.first).to be_an_instance_of Transaction
   end
+
+  it 'stores each transaction in transactions array' do
+    account.deposit(1000)
+    account.withdraw(500)
+    expect(account.transactions.length).to eq 2
+  end
 end
