@@ -28,17 +28,6 @@ describe Account do
     expect(account.balance).to eq 500
   end
 
-  xit 'stores user deposit into transaction array' do
-    account.deposit(1000)
-    expect(account.transactions).to eq [1000]
-  end
-
-  it 'stores user withdrawel into transaction array' do
-    account.deposit(1000)
-    account.withdraw(500)
-    expect(account.transactions.last).to eq -500
-  end
-
   it 'raises error if withdraw is greater than balance' do
     account.deposit(1000)
     expect { account.withdraw(1001) }.to raise_error('Insufficient Funds')
