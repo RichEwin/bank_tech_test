@@ -47,12 +47,9 @@ I would like a history of my latest transactions: credit and debit, with the dat
 - Terminal: Run ```bundle install```to install dependencies
 - Terminal: Run ```rspec``` to run unit tests
 - Terminal: Run ```rubocop```to run linter
-
-- irb: Run
+- Terminal: Run ```irb -r './lib/account.rb'```
 
 ```
-:001 > require './lib/account.rb'
- => true
 :002 > account = Account.new
 :003 > account.deposit(1000)
 :004 > account.deposit(2000)
