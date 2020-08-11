@@ -1,7 +1,5 @@
 # Bank Tech Test
 
-[Original](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md) tech test specification
-
 ## Approach
 
 The Bank program is split up into various classes that understands the behaviour of various methods. The classes encapsulate these behaviours.
