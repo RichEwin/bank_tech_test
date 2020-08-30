@@ -1,8 +1,8 @@
-# Bank Tech Test
+# Bank Account
 
 ## Approach
 
-The Bank program is split up into various classes that understands the behaviour of various methods. The classes encapsulate these behaviours.
+The Bank Account application is split up into various classes that understands the behaviour of various methods. The classes encapsulate these behaviours.
 
 - The Account Class understands the behaviour of the balance, deposit, withdraw and statement methods.
 - The Statement Class understands the behaviour of the print_statement method.
